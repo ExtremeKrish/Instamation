@@ -2,30 +2,14 @@
 
 instagram_id="17841465696847893"
 access_token="EAALWR0fZB1UEBO2rVlSQu9PfHwHBN9FG3dXl1pUZCVuQ0vOS4xcMn85l367WEFZCFQbQBmggP6DakGeg0Xm2hndxzXzwwKeyY5Q4R30gwUMZCN4ZA7ZCuTJk1xLPeIwTqkKUBTu75eNPr50qeX6qKkoGQeNAoNIMUSYr6mHaG7AJqo81lJKrm6FzumwDQhMPrWiwZDZD"
-caption=$(cat <<EOF
-
-Want to learn Manipulation and Dark Psychology???
-Get the most ultimate Manipulation Ebook from the link in my bio.
-.
-.
-@TheManosphereGuide
-.
-.
-.
-.
-#sigma #sigmaedit #sigmarules #sigmafemale #sigmamindset #sigmamales #sigmagrindset #advice #respect #rules #thomasshelby #alpha #betamale #growupwithme #goviral #viralvideo #foryoupage #foryourpage #fyp #ghost #manipulate #foryoupageofficiall #fyp #trending
-EOF
-)
-
+caption=$(cat "caption.txt")
 
 function start(){
 local count=$1
 image_url="https://raw.githubusercontent.com/ExtremeKrish/Auto-IG/main/imggen_${count}.png"
 
-
 # Calling the first API
 id=$(call_first_api "${image_url}" "${access_token}")
-
 
 if [ -n "${id}" ]; then
 response=$(call_second_api "${id}" "${access_token}")
